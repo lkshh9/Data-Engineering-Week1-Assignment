@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+
+N=int(input())
+elems=input().split()
+nInd=int(input())
+
+comb_lst=list(combinations(elems, nInd))
+a_times=[1 if 'a' in elem else 0 for elem in comb_lst]
+
+print(sum(a_times)/len(comb_lst))
